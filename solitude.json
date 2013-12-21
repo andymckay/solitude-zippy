@@ -1,0 +1,21 @@
+{
+  "stackato": {
+    "name": "solitude",
+    "pre": [
+      "cp solitude/settings/local.py-dist solitude/settings/local.py",
+      "perl -e \"s/SECRET_KEY = ''/SECRET_KEY = 'skldjfsdf'/\" -p -i solitude/settings/local.py",
+      "perl -e \"s/SITE_URL = ''/SITE_URL = '{URL}'/\" -p -i solitude/settings/local.py",
+      "perl -e \"s/ZIPPY_MOCK = True/ZIPPY_MOCK = False/\" -p -i solitude/settings/local.py",
+      "perl -e \"s/zippy.paas.allizom.org'/zippy-{ZIPPY}.paas.allizom.org'/\" -p -i solitude/settings/local.py",
+      "perl -e \"s/'key': 'dpf43f3p2l4k3l03',/'key': 'tobereplaced',/\" -p -i solitude/settings/local.py",
+      "perl -e \"s/'secret': 'kd94hf93k423kf44',/'secret': 'tobereplaced',/\" -p -i solitude/settings/local.py"
+    ],
+    "git": {
+      "repo": "https://github.com/mozilla/solitude.git"
+    }
+  },
+  "git": {
+    "name": "solitude",
+    "repo": "https://github.com/mozilla/solitude.git"
+  }
+}

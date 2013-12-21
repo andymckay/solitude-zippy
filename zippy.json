@@ -1,0 +1,15 @@
+{
+  "stackato": {
+    "name": "zippy",
+    "pre": [
+      "cp lib/config/local-dist.js lib/config/local.js"
+    ],
+    "git": {
+      "repo": "https://github.com/mozilla/zippy.git"
+    }
+  },
+  "git": {
+    "name": "zippy",
+    "repo": "https://github.com/mozilla/zippy.git"
+  }
+}
